@@ -1,0 +1,72 @@
+Aahanaa Tibrewal (Github: Atibrewa) and Kien Nguyen (Github: KienNguyen17)
+
+Step 2:  view the list of tasks
+HTTP/1.1 200 OK
+Server: Werkzeug/2.3.7 Python/3.10.11
+Date: Mon, 11 Sep 2023 16:52:17 GMT
+Content-Type: application/json
+Content-Length: 386
+Connection: close
+
+{
+  "tasks": [
+    {
+      "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+      "done": false,
+      "title": "Buy groceries",
+      "uri": "http://http://127.0.0.1:5000//todo/1"
+    },
+    {
+      "description": "Need to find a good Python tutorial on the web",
+      "done": false,
+      "title": "Learn Python",
+      "uri": "http://http://127.0.0.1:5000//todo/2"
+    }
+  ]
+}
+
+Step 3: create a new tasks
+HTTP/1.1 201 CREATED
+Server: Werkzeug/2.3.7 Python/3.10.11
+Date: Mon, 11 Sep 2023 22:22:00 GMT
+Content-Type: application/json
+Content-Length: 182
+Connection: close
+
+{
+  "task": {
+    "description": "Finish all the tasks in the activity",
+    "done": false,
+    "title": "In-class Activity",
+    "uri": "http://http://127.0.0.1:5000//todo/3"
+  }
+}
+
+Step 4: mark a task as done
+HTTP/1.1 200 OK
+Server: Werkzeug/2.3.7 Python/3.10.11
+Date: Mon, 11 Sep 2023 22:30:24 GMT
+Content-Type: application/json
+Content-Length: 176
+Connection: close
+
+{
+  "task": {
+    "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+    "done": true,
+    "title": "Buy groceries",
+    "uri": "http://http://127.0.0.1:5000//todo/1"
+  }
+}
+
+Step 5: delete a task
+HTTP/1.1 200 OK
+Server: Werkzeug/2.3.7 Python/3.10.11
+Date: Tue, 12 Sep 2023 00:58:48 GMT
+Content-Type: application/json
+Content-Length: 21
+Connection: close
+
+{
+  "result": true
+}
